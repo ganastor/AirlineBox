@@ -1,9 +1,8 @@
-
 #header {
-  color: #f8f8f8;
+  color: #111111;
 }
 #header a {
-  color: #f8f8f8;
+  color: #424242;
   text-decoration: none;
   font-size: 1em;
   display: block;
@@ -17,7 +16,7 @@
 .navbar-inverse {
   background-color: #F8F8F8;
   border-color: #E7E7E7;
-  background-image: linear-gradient(to bottom, #FF0000 0%, #ff0000 100%);
+  background-image: linear-gradient(to bottom, #111111 0%, #111111 100%);
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -27,7 +26,7 @@
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: rgba(218, 55, 55, 0.6);
+  background-color: #424242;
 }
 
 /* title */
@@ -36,7 +35,7 @@
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #CC3300;
+  color: #B39DDB;
 }
 
 #header #top-nav ul li a {
@@ -112,9 +111,10 @@ textarea:first-child {
 }
 
 #content #welcome {
-  background: #e0e0e0;
+  background: #263238;
   margin: 0 0 1em;
   padding-bottom: 1em;
+  border-radius: 5px
 }
 #content #welcome img {
   margin: 0 .25em 0 0;
@@ -131,7 +131,7 @@ textarea:first-child {
 }
 
 #footer {
-  background: #ff0000;
+  background: #212121;
   border-top: 1px solid #922e0f;
   margin: 2em 0 0 0;
   padding: 0 0 1em;
@@ -177,13 +177,19 @@ textarea:first-child {
   #content #chat #shoutbox-input .nickname {
     margin: 0 5px 0 0;
     width: 15%;
+	background-color: #424242;
+	color: #FFFFFF;
   }
   #content #chat #shoutbox-input .message {
     margin: 0 5px 0 0;
     width: 70%;
+	background-color: #424242;
+	color: #FFFFFF;
   }
   #content #chat #shoutbox-input .button {
     width: 10%;
+	background-color: #424242;
+	color: #FFFFFF;
   }
   #content #chat #shoutbox-options {
     display: none;
