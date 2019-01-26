@@ -4,20 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
 	<meta http-equiv="cache-control" content="no-cache">
-	<title>AirlineBox</title>
+	<title>Big Chungus - Home</title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/font.css">
 	<link rel="stylesheet" href="css/structure.css">
 </head>
-<body>
+<body onload="setInterval(refresh_shoutbox, 2000);">
 
 		<span id="vc_count"></span>
     <div id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-	<a href="/Content/" class="brand navbar-brand"><img src="img/lbx-logo-small-white.png" width="24" alt="lbx-logo-small">&nbsp;AirlineBox</a>
+	<a href="/Content/" class="brand navbar-brand"><img src="img/little-chungus.jpg" width="24" alt="lbx-logo-small">&nbsp;Big Chungus</a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -47,24 +47,23 @@
 	<!-- visitor counter --> 
 			<div id="welcome">
 				<div class="container">
-					<h1><img src="img/lbx-logo-small.png">Welcome AirlineBox!</h1>
+					<h1>Welcome to Big Chungus!</h1>
 					<p>Browse and download any of the available files, or chat with other users below.</p><p>This network is private; no logs or other identifying data are retained.</p>
 				</div>
 			</div>
 			<div class="container">
 				<div class="one-third">
 					<h2><a href="/content/theater/">Movie Theater</a></h2>
-					<a href="/content/theater/"><img src="img/cinema.png" height="45" width="180"></a>
 				</div>
 
 				<div class="two-thirds" id="chatcontainer">
 					<div id="chat" class="card last">
 						<h2>Chat</h2>
-						<div id="shoutbox" class="shoutbox_content"></div>
+						<div id="shoutbox" class="shoutbox_content" style="overflow-y:scroll; height:400px;"></div>
 						<form method="POST" name="psowrte" id="sb_form" onsubmit='getTime();'>
 							<div id="shoutbox-input">
 								<input class="nickname" type="text" 	name="name" 	placeholder="Alias" value="Anonymous">
-								<input class="message" 	type="text" 	name="data" 	placeholder="Message...">
+								<input class="message" 	type="text" 	name="data" 	placeholder="Message... (updates every 2s)">
 								<button class="btn-default" type="submit" 	name="submit" value="Send"  id="send-button">Send</button>
 							</div>
 							<div id="shoutbox-options">
@@ -76,6 +75,7 @@
 								<label for="red" 	class="bg-red">		<input name="color" type="radio" value="red" 	id="red"		>Red</label>
 							</div>
 							<input type="hidden" name="timestamp" id="timestamp">
+							
 							<script language='JavaScript'>
 								function getTime(){
 								var date = new Date();

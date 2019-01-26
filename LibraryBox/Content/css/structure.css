@@ -57,6 +57,9 @@
   margin: 0;
   padding: 0;
 }
+
+#shoutbox
+
 #content #shoutbox .message {
   font-size: .8em;
 }
@@ -120,7 +123,8 @@ textarea:first-child {
   margin: 0 .25em 0 0;
 }
 #content #chat #shoutbox {
-  height: 300px;
+  position: relative;
+  min-height: 250px;
   margin: 0 0 .5em;
 }
 #content #chat #shoutbox .message {
