@@ -30,14 +30,11 @@ $j(document).ready(function() {
 
 	$j.getJSON("/config.json" , function(data) {
 		var showbox = data.librarybox.module.shoutbox.status;
-		if (showbox) {
-			display_shoutbox();
-		} else {
-			document.getElementById("chatcontainer").style.display="none";
-		}
+		display_shoutbox();
 	});
 	
 });
+
 
 function refresh_shoutbox () {
 	$j.get('/chat_content.html', function(data) {
@@ -51,9 +48,15 @@ function refresh_time_sb () {
   }
 
   function post_shoutbox () {
+	$j("#send-button").prop('value', 'Sending...');
+    $j("#send-button").prop('disabled', false);
+	  
+	  
   	$j.post("/cgi-bin/psowrte.py" , $j("#sb_form").serialize())
   	.success(function() { 
   		refresh_shoutbox(); 
+		$("#send-button").prop('value', 'Send')
+        $("#send-button").prop('disabled', false);
   	});
   	$j('#shoutbox-input .message').val('');
   }
